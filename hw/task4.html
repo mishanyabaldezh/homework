@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userInput = prompt("browser");
+        switch(userInput.toLowerCase){
+            case 'ie':
+                    console.log("Мы не поддерживаем браузер IE.");
+                    break;
+            case 'chrome':
+                console.log("Мы поддерживаем браузер Chrome.");
+                break;
+            case 'firefox':
+                console.log("Мы поддерживаем браузер Firefox.");
+            case 'safari':
+                console.log("Мы поддерживаем браузер Safari.");
+                break;
+            case 'opera':
+                console.log("Мы поддерживаем браузер Opera.");
+            default :
+                console.log("Мы не поддерживаем " + userInput);
+                break;
+        }
+    </script>
+</body>
+</html>

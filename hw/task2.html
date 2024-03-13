@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let userInput1 = prompt("введите строку");
+       if(userInput1.includes("срочно") ||
+         userInput1.includes("безотлагательно") ||
+           userInput1.includes("деньги")){
+            console.log("данное сообщение подозрительно");
+           }
+        else{
+            console.log(userInpu1);
+        }
+
+        let userInpu2 = prompt("введите строку2");
+        if(userInpu2.length > 20){
+            console.log(userInpu2.slice(0,20) + "...");
+        }
+        else{
+            console.log(userInpu2);
+        }
+
+        const adminName = "misha";
+        let userInput3 = prompt("введите имя");
+        if(userInput3 == adminName){
+            console.log("access+");
+        }
+        else{
+            console.log("access-");
+        }
+    </script>
+</body>
+</html>

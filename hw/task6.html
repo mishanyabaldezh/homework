@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let values = [];
+        for(let i = 0; i < 10; i++){
+            let randomValue = Math.floor(Math.random() * 101);
+            values.push(randomValue);
+        }
+        console.log("Значения массива:");
+        for (let i = 0; i < array.length; i++) {
+            console.log(values[i]);
+        }
+        let max = array[0];
+        let min = array[0];
+        for (let i = 1; i < values.length; i++) {
+            if (array[i] > max) {
+                max = values[i];
+            }
+            if (array[i] < min) {
+                min = values[i];
+            }
+        }
+
+            console.log("Максимальное значение в массиве: " + max);
+            console.log("Минимальное значение в массиве: " + min);
+    </script>
+</body>
+</html>

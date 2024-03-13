@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userInput = parseInt(prompt("введите возраст:"));
+        let status = (userInput > 18) ? "Взрослый" : "Ребенок";
+        console.log(status);
+        let data;
+        let role = prompt("Введите вашу роль:");
+        data = (role === 'Admin') ? 'Admin access level' :
+            (role === 'Teacher') ? 'Teacher access level' :
+            (role === 'Student') ? 'Student access level' :
+            'Access denied';
+        console.log(data);
+    </script>
+</body>
+</html>

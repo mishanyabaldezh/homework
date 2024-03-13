@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let userInput = prompt("ввести число, большее 1000")
+            if (userInput > 1000) {
+                console.log(userInput);
+                break;
+            }
+        }
+        for (let i = 2; i <= 20;) {
+            console.log(i);
+            i += 2;
+        }
+
+        let values = [];
+        for (let i = 2; i <= 30; i += 2) {
+            values.push(i);
+        }
+        console.log("Четные: " + values.join(", "));
+    </script>
+</body>
+
+</html>
