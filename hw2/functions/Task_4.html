@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+
+<body>
+<pre>
+        Задание:
+Переписать код ниже (Задача 7 из папки Function1) таким образом, что  у нас была бы одна функция calculate, которая принимала 3 параметра: 2 операнда и коллбек-функцию.
+Вид коллбек-функции зависит от введенного знака (использовать и анонимный вид функции, и стрелочный, т.е. два враианта кода на выходе).
+
+    </pre>
+    <script>
+
+        function calculate(a, b, callback) {
+        return callback(a, b);
+        }
+
+        let operand1 = +prompt("Введите первое число: ");
+        let sign = prompt("Введите знак арифметической операции: + - * /");
+        let operand2 = +prompt("Введите второе число: ");
+        let result;
+
+        switch (sign) {
+            case "+":
+                result = add(operand1, operand2, (a, b) => a + b);
+                break;
+            case "-":
+                result = sub(operand1, operand2, (a, b) => a - b);
+                break;
+            case "*":
+                result = mul(operand1, operand2, (a, b) => a * b);
+                break;
+            case "/":
+                result = div(operand1, operand2, (a, b) => a / b);
+                break;
+            default:
+                console.error(sign + " - не является знаком арифметической операции.");
+        }
+
+        if (result !== undefined)
+            console.log(`${operand1} ${sign} ${operand2} = ${result}`);
+        
+    </script>
+</body>
+
+</html>

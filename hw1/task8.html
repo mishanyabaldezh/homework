@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var products = ["Бумага", "Ручка", "Карандаш", "Маркер"];
+        var prices = [120.5, 14, 10, 85.2];
+        var totalCost = 0;
+        var totalQuantity = 0;
+        function isNumber(value) {
+            return !isNaN(value);
+        }
+        function inputQuantity(productName) {
+            var quantity;
+            do {
+                quantity = parseFloat(prompt("Укажите количество товара " + productName + 
+                ", цена " + prices[products.indexOf(productName)] + 
+                " (со значением по умолчанию 0):")) || 0;
+                if (!isNumber(quantity)) {
+                    alert("Пожалуйста, введите число.");
+                }
+            } while (!isNumber(quantity));
+            return quantity;
+        }
+        for (var i = 0; i < products.length; i++) {
+            var productName = products[i];
+            var quantity = inputQuantity(productName);
+            var price = prices[i];
+            var cost = quantity * price;
+            totalCost += cost;
+            totalQuantity += quantity;
+        }
+        var deliveryCost;
+        if (totalCost >= 1000) {
+            deliveryCost = 0;
+        } else if (totalCost >= 500) {
+            deliveryCost = 100;
+        } else {
+            deliveryCost = 200;
+        }
+        var totalOrderCost = totalCost + deliveryCost;
+        console.log("Общая сумма за товары: " + totalCost.toFixed(2) + " руб.");
+        console.log("Количество товаров: " + totalQuantity);
+        console.log("Стоимость доставки: " + deliveryCost.toFixed(2) + " руб.");
+        console.log("Общая сумма заказа: " + totalOrderCost.toFixed(2) + " руб.");
+
+    </script>
+</body>
+</html>

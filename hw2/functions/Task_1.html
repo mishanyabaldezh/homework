@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <pre>
+        Задание:
+        1. Создайте функцию min(a, b), которая возвращает меньшее из чисел а и b. Результат работы выведите в консоль.
+	2. Создайте функцию-выражение avg(a, b, c), которая возвращает среднее арифметическое для чисел a, b, c
+   	Если параметр отсутствует, то не используйте значение для расчета среднего арифметического значения.
+   	Результат работы выведите в консоль
+    </pre>
+    <script>
+
+        function min(a, b) {
+            return a < b ? a : b;
+        }
+
+        console.log("Минимальное число из A и B:", min(50, 10));
+        
+        var avg = function(a, b, c) {
+            var sum = 0;
+            var count = 0;
+            if (typeof a === 'number') {
+                sum += a;
+                count++;
+            }
+            if (typeof b === 'number') {
+                sum += b;
+                count++;
+            }
+            if (typeof c === 'number') {
+                sum += c;
+                count++;
+            }
+            if (count === 0) {
+                return NaN;
+            }
+            return sum / count;
+        };
+        console.log("Среднее арифметическое чисел 5, 10 и 15:", avg(5, 10, 15));
+        console.log("Среднее арифметическое чисел 2 и 8:", avg(2, 8));
+        console.log("Среднее арифметическое чисел 4, 'текст', 6:", avg(4, 'текст', 6));
+
+    </script>
+</body>
+
+</html>

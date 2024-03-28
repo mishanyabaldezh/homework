@@ -7,17 +7,17 @@
 </head>
 <body>
     <script>
-       let userInput1 = prompt("введите строку");
+       let userInput1 = prompt("Bведите строку: ");
        if(userInput1.includes("срочно") ||
          userInput1.includes("безотлагательно") ||
            userInput1.includes("деньги")){
-            console.log("данное сообщение подозрительно");
+            console.log("Данное сообщение подозрительно");
            }
         else{
             console.log(userInpu1);
         }
 
-        let userInpu2 = prompt("введите строку2");
+        let userInpu2 = prompt("Введите строку: ");
         if(userInpu2.length > 20){
             console.log(userInpu2.slice(0,20) + "...");
         }
@@ -26,12 +26,12 @@
         }
 
         const adminName = "misha";
-        let userInput3 = prompt("введите имя");
+        let userInput3 = prompt("Введите имя: ");
         if(userInput3 == adminName){
-            console.log("access+");
+            console.log("Доступ разрешен");
         }
         else{
-            console.log("access-");
+            console.log("Доступ ограничен");
         }
     </script>
 </body>

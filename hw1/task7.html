@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var userInput = prompt("Введите имена через запятую:");
+        var namesArray = userInput.split(",").map(function(name) {
+            return name.trim();
+        });
+        for (var i = 0; i < namesArray.length; i++) {
+            if (namesArray[i] === "Алёна") {
+                namesArray[i] = "Елена";
+            }
+        }
+        if (namesArray.length > 0) {
+            namesArray.splice(1, 0, "Антон", "Евгений");
+        }
+        console.log(namesArray);
+
+    </script>
+</body>
+</html>
